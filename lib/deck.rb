@@ -11,6 +11,7 @@ class Deck
       (1..13).each do |value|
         @cards << Card.new(value, suit)
       end
+    end
   end
 
   def draw
@@ -19,6 +20,6 @@ class Deck
   end
 
   def shuffle
-    # shuffles the deck
+    @cards.shuffle
   end
 end

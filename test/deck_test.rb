@@ -31,4 +31,10 @@ describe Deck do
       expect(@deck.draw).must_be_nil
     end
   end
+
+  describe "shuffle" do
+    it "responds to shuffle" do
+      expect(@deck).must_respond_to :shuffle
+    end
+  end
 end

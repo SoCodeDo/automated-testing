@@ -21,18 +21,19 @@ class Card
 
   def to_s
 
-    card_text_values = {
-        1 => "Ace",
-        11 => "Jack",
-        12 => "Queen",
-        13 => "King"
-    }
-
-    if card_text_values[value].nil?
-      card_text_values[value] = value
+    if value == 1
+      return "Ace of #{suit.to_s}"
+    elsif value == 11
+      return "Jack of #{suit.to_s}"
+    elsif value == 12
+      return "Queen of #{suit.to_s}"
+    elsif value == 13
+      return "King of #{suit.to_s}"
+    else
+      return "#{value} of #{suit.to_s}"
     end
 
-    return "#{card_text_values}[value] of #{suit.to_s}"
+    return "#{value} of #{suit.to_s}"
   end
 
 end
