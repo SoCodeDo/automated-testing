@@ -1,16 +1,15 @@
  require_relative 'test_helper'
 
-describe Card do
-  describe "You can create a Card instance" do
-
-    it "Can be created" do
-      [:hearts, :spades, :clubs, :diamonds].each do |suit|
-        (1..13).each do |value|
-          card = Card.new(value, suit)
-          expect(card).must_be_instance_of Card
-        end
-      end
-    end
+ describe Card do
+   describe "You can create a Card instance" do
+     it "Can be created" do
+       [:hearts, :spades, :clubs, :diamonds].each do |suit|
+          (1..13).each do |value|
+            card = Card.new(value, suit)
+            expect(card).must_be_instance_of Card
+          end
+       end
+     end
 
     it "Raises an ArgumentError for invalid parameters" do
       # To raise an ArgumentError in card.rb
@@ -81,8 +80,5 @@ describe Card do
           expect(card.suit).must_equal suit
         end
       end
-
     end
   end
-
-end
